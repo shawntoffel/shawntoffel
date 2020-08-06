@@ -1,4 +1,4 @@
-### Hi there 👋
+![shawntoffel's github stats](https://github-readme-stats.vercel.app/api?username=shawntoffel&count_private=true)
 
 <!--
 **shawntoffel/shawntoffel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
