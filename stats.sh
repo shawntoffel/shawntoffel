@@ -10,4 +10,5 @@ jsonPayload="{\"query\":\"$query\", \"variables\":{\"login\":\"$user\"}}"
 output=$(curl -fsS -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $token" -d "$jsonPayload" https://api.github.com/graphql)
 
 echo "Public Repo Stats:"
+echo "------------------"
 echo "$output" | jq -crf filter.jq
