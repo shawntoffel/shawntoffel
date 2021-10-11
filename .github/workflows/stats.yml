@@ -12,7 +12,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Fetch Stats
-        run: ./stats.sh shawntoffel
-        shell: sh
+        run: sh stats.sh shawntoffel
         env:
           STATS_FETCH_TOKEN: ${{ secrets.STATS_FETCH_TOKEN }}
