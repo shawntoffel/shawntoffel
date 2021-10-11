@@ -2,7 +2,7 @@
 set -e 
 
 user="$1"
-token="$GITHUB_STATS_TOKEN"
+token="$STATS_FETCH_TOKEN"
 
 query='query($login: String!){user(login:$login){repositoriesContributedTo{totalCount}pullRequests{totalCount}issues{totalCount}repositories(first:100,ownerAffiliations:OWNER,orderBy:{direction:DESC,field:STARGAZERS}){nodes{stargazerCount}}}}'
 jsonPayload="{\"query\":\"$query\", \"variables\":{\"login\":\"$user\"}}"
