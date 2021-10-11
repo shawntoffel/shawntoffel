@@ -12,7 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Fetch Stats
-        run: sh stats.sh shawntoffel
+      - name: Fetch Stats & Update README
+        run: sh stats.sh shawntoffel > README
         env:
           STATS_FETCH_TOKEN: ${{ secrets.STATS_FETCH_TOKEN }}
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+          message: "Updated GitHub user stats"
