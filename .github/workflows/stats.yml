@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Fetch Stats & Update README
-        run: sh stats.sh shawntoffel > README
-        env:
-          STATS_FETCH_TOKEN: ${{ secrets.STATS_FETCH_TOKEN }}
+      - uses: shawntoffel/actions/readme-stats@v1
+        with:
+          github-user: shawntoffel
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: EndBug/add-and-commit@v7
         with:
