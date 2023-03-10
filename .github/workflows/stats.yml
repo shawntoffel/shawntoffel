@@ -12,10 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: shawntoffel/actions/readme-stats@v1
+      - uses: shawntoffel/actions/readme-stats@v2
         with:
           github-user: shawntoffel
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          exclude: "shawntoffel|jukeizu|kotatsuclub"
 
       - uses: EndBug/add-and-commit@v7
         with:
